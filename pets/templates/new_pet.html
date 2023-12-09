@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{%  block content %}
+
+<h2> Novo formulário de bichinhos de estimação </h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Adicionar a adoção">
+
+</form>
+{% endblock %}

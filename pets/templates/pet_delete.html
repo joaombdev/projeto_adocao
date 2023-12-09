@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p> Olá, tem certeza que deseja deletar o pet <strong>{{object.brand}} {{object.model}} </strong></p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Deletar pet</button>
+</form>
+
+{% endblock %}
